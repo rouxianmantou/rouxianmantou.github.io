@@ -83,6 +83,7 @@ body.covered {
     color: $footer-link-color;
   }
   ul.slink {
+    padding-inline-start: 0px;
     margin: $gutter-width 0;
     list-style: none;
     & > li {
