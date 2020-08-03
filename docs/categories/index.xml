@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on rxmt&#39;s blog</title>
-    <link>https://keyin.me/categories/</link>
+    <link>https://rouxianmantou.github.io/categories/</link>
     <description>Recent content in Categories on rxmt&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 01 Aug 2014 03:09:32 +0800</lastBuildDate>
     
-	<atom:link href="https://keyin.me/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rouxianmantou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>test</title>
-      <link>https://keyin.me/categories/test/</link>
+      <link>https://rouxianmantou.github.io/categories/test/</link>
       <pubDate>Fri, 01 Aug 2014 03:09:32 +0800</pubDate>
       
-      <guid>https://keyin.me/categories/test/</guid>
+      <guid>https://rouxianmantou.github.io/categories/test/</guid>
       <description></description>
     </item>
     

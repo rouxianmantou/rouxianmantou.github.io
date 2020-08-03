@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rxmt&#39;s blog</title>
-    <link>https://keyin.me/</link>
+    <link>https://rouxianmantou.github.io/</link>
     <description>Recent content on rxmt&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 01 Aug 2014 03:09:32 +0800</lastBuildDate>
     
-	<atom:link href="https://keyin.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rouxianmantou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Archive</title>
-      <link>https://keyin.me/archive/</link>
+      <link>https://rouxianmantou.github.io/archive/</link>
       <pubDate>Sat, 19 Aug 2017 21:37:49 +0800</pubDate>
       
-      <guid>https://keyin.me/archive/</guid>
+      <guid>https://rouxianmantou.github.io/archive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>https://keyin.me/about/</link>
+      <link>https://rouxianmantou.github.io/about/</link>
       <pubDate>Sat, 19 Aug 2017 20:09:28 +0800</pubDate>
       
-      <guid>https://keyin.me/about/</guid>
+      <guid>https://rouxianmantou.github.io/about/</guid>
       <description>Hello World! { &amp;#34;Name&amp;#34;: &amp;#34;rxmt&amp;#34;, &amp;#34;Hobbies&amp;#34;: [&amp;#34;Badminton&amp;#34;, &amp;#34;Coding&amp;#34;], &amp;#34;Location&amp;#34;: &amp;#34;Tianjin&amp;#34;, &amp;#34;Contacts&amp;#34;: { &amp;#34;Email&amp;#34;: &amp;#34;ghlvahe@tju.edu.cn&amp;#34; } } </description>
     </item>
     
     <item>
       <title>Sample post</title>
-      <link>https://keyin.me/posts/sample/</link>
+      <link>https://rouxianmantou.github.io/posts/sample/</link>
       <pubDate>Fri, 01 Aug 2014 03:09:32 +0800</pubDate>
       
-      <guid>https://keyin.me/posts/sample/</guid>
+      <guid>https://rouxianmantou.github.io/posts/sample/</guid>
       <description>This is a sample post.</description>
     </item>
     
