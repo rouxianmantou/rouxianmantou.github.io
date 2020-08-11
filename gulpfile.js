@@ -15,6 +15,11 @@ const pngquant = require("imagemin-pngquant");
 const toml = require("toml");
 const fs = require("fs");
 const hugoLunr = require('hugo-lunr-zh');
+const purifycss = require("gulp-purifycss");
+const rev = require("gulp-rev");
+const htmlmin = require("gulp-htmlmin");
+const postcss = require("gulp-postcss");
+const replace = require("gulp-rev-replace");
 
 const siteConf = toml.parse(fs.readFileSync("./config.toml"));
 const c = Object.assign({}, require('./package.json').config);
@@ -26,6 +31,7 @@ const prodDir = siteConf.publishDir || "public";
 let env = 'dev' // dev, prod, theme
 
 exports.serve = series(buildDev, serve);
+exports.build = build
 
 function serve(done) {
   bs.init({
@@ -40,7 +46,6 @@ function serve(done) {
   watch(`${srcDir}/image/**/*.{png,jpg}`, image);
   watch(`${srcDir}/pimg/**/*.{png,jpg}`, pimg);
 
-  //todo
   const toReload = [`${testDir}/**/*.html`, `${testDir}/js/**/*.js`];
   const watcher = watch(toReload);
   watcher.on('change', function (path, stats) {
@@ -49,6 +54,15 @@ function serve(done) {
   });
 
   done();
+}
+
+function build(cb) {
+  env = "prod";
+  run([buildDev],
+    [purifycssBuild],
+    [revBuild, htmlminBuild],
+    [refBuild],
+    [geneServiceWorker], cb)
 }
 
 function buildDev(cb) {
@@ -152,4 +166,61 @@ function lunr() {
     option.matterType = "yaml";
   }
   return hugoLunr(option);
+}
+
+function purifycssBuild() {
+  const base = env === 'theme' ? `${themeDir}` : `${testDir}`;
+  return src(`${base}/**/*.css`)
+    .pipe(purifycss([`${base}/**/*.html`, `${base}/**/*.js`]))
+    .pipe(
+      postcss([
+        require("autoprefixer")({ browsers: c.browserslist }),
+        require("cssnano")()
+      ])
+    )
+    .pipe(dest(base));
+}
+
+function revBuild() {
+  const revExts = "png,svg,jpg,css,js";
+  return src(`${testDir}/**/*.{${revExts}}`)
+    .pipe(rev())
+    .pipe(dest(prodDir))
+    .pipe(rev.manifest("rev-manifest.json"))
+    .pipe(dest(testDir));
+}
+
+function htmlminBuild() {
+  return src(`${testDir}/**/*.{html,xml}`)
+    .pipe($if("*.html", htmlmin({ collapseWhitespace: true })))
+    .pipe(dest(prodDir));
+}
+
+function refBuild() {
+  const refExts = "html,css,js";
+  return src(`${prodDir}/**/*.{${refExts}}`)
+    .pipe(replace({ manifest: src(`${testDir}/rev-manifest.json`) }))
+    .pipe(dest(prodDir));
+}
+
+function geneServiceWorker(cb) {
+  var swPrecache = require('sw-precache');
+  var rootDir = prodDir;
+  swPrecache.write(`${rootDir}/service-worker.js`, {
+    staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,json,woff2}'],
+    stripPrefix: rootDir,
+    runtimeCaching: [{
+      urlPattern: "/*",
+      handler: 'cacheFirst',
+      options: { origin: "cdn.bootcss.com" }
+    }, {
+      urlPattern: "/*",
+      handler: 'cacheFirst',
+      options: { origin: "fonts.loli.net" }
+    }, {
+      urlPattern: "/*",
+      handler: 'cacheFirst',
+      options: { origin: "gstatic.loli.net" }
+    }]
+  }, cb);
 }
