@@ -99,7 +99,7 @@ function style() {
 }
 
 function script() {
-  const destDir = env === 'theme' ? `${themeDir}/static/css` : `${testDir}/css`;
+  const destDir = env === 'theme' ? `${themeDir}/static/js` : `${testDir}/js`;
   return rollup(
     [
       {
