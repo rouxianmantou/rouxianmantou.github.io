@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/404.html","c12489f6deeb4e03e2d2933a46c3c1bb"],["/about/index.html","e9bdcaf05594c516369840997f3faca9"],["/archive/index.html","402a98dded1efd6e9139257c418863f7"],["/categories/index.html","f80dcc7a3e4563a9134f149e934f1254"],["/categories/test/index.html","8b32db577b6c7d004a4df8307084859d"],["/categories/test/page/1/index.html","62043379c525cf19bebc9d05bf95dce1"],["/css/index-29d599186e.css","29d599186ea36b07d02bbae747bf7fe6"],["/fonts/roboto/Roboto-Bold.woff","eed9aab5449cc9c8430d7d258108f602"],["/fonts/roboto/Roboto-Bold.woff2","c0f1e4a4fdfb8048c72e86aadb2a247d"],["/fonts/roboto/Roboto-Light.woff","ea36cd9a0e9eee97012a67b8a4570d7b"],["/fonts/roboto/Roboto-Light.woff2","3c37aa69cd77e6a53a067170fa8fe2e9"],["/fonts/roboto/Roboto-Medium.woff","cf4d60bc0b1d4b2314085919a00e1724"],["/fonts/roboto/Roboto-Medium.woff2","1561b424aaef2f704bbd89155b3ce514"],["/fonts/roboto/Roboto-Regular.woff","3cf6adf61054c328b1b0ddcd8f9ce24d"],["/fonts/roboto/Roboto-Regular.woff2","5136cbe62a63604402f2fedb97f246f8"],["/fonts/roboto/Roboto-Thin.woff","44b78f142603eb69f593ed4002ed7a4a"],["/fonts/roboto/Roboto-Thin.woff2","1f35e6a11d27d2e10d28946d42332dc5"],["/img/avatar-17b1af67b3.jpg","17b1af67b312daa6df8d522e68f737b8"],["/img/bg-d43cf8f313.jpg","d43cf8f313056ba88439d042edca5213"],["/index.html","e0ee09bcac3bfdb80ee248fb6c871af1"],["/index.json","5337132cb5105b2a93391723d7e24c24"],["/js/Valine.min.js","54acfc7ad84de92440342a0303a171b4"],["/js/av-min.js","7decd7d8ad2ecdad9aa8168ee8485524"],["/js/canvas-c7ac392e3f.js","c7ac392e3f464d9d3897868407e44cc1"],["/js/index-a9f7f25322.js","a9f7f25322297212349498fc0b28d44b"],["/js/polyfill-6f68ef8238.js","6f68ef82386541ed242140db5c3282a1"],["/page/1/index.html","6d1f7f61d2a40ae57a69b47e7dcc5974"],["/pimg/11328970,1920,1080-047b7a2de8.jpg","047b7a2de85607457c8e3e34d0b86948"],["/posts/index.html","01171cbd7e07caf1c21f5f5d8d98f26b"],["/posts/page/1/index.html","f82ea37f359e97d8278ebf834c4897d1"],["/posts/sample/index.html","55e025a529985cbefdfd49f78c510ad9"],["/svg/icon.svg","f534fdc4b27570991ebe3dbc89ea15e0"],["/tags/index.html","666bccf86b27890a4a5faf2c1b763084"],["/tags/test/index.html","ac341d6710b6d42a49c4475eecaa8496"],["/tags/test/page/1/index.html","c707649f1fe5b4508eeff9752dc51b31"]];
+var precacheConfig = [["/404.html","c12489f6deeb4e03e2d2933a46c3c1bb"],["/about/index.html","ef837cb2141a81d56acd06300b161390"],["/archive/index.html","926bd946ff1095fc3b7d660b62975f02"],["/categories/index.html","95aa493c44dd5a2e1092d8dce2ecb5bb"],["/categories/test/index.html","8038f5ccbce6dcbdbb780ff5da59ab7c"],["/categories/test/page/1/index.html","62043379c525cf19bebc9d05bf95dce1"],["/css/canvas-c7ac392e3f.js","c7ac392e3f464d9d3897868407e44cc1"],["/css/index-29d599186e.css","29d599186ea36b07d02bbae747bf7fe6"],["/css/index-a9f7f25322.js","2c79428b9006bfae8ba5bf9e9bba5798"],["/css/index-c7233c1f39.css","c7233c1f39a8162490cdedbe020cd263"],["/css/polyfill-6f68ef8238.js","6f68ef82386541ed242140db5c3282a1"],["/fonts/roboto/Roboto-Bold.woff","eed9aab5449cc9c8430d7d258108f602"],["/fonts/roboto/Roboto-Bold.woff2","c0f1e4a4fdfb8048c72e86aadb2a247d"],["/fonts/roboto/Roboto-Light.woff","ea36cd9a0e9eee97012a67b8a4570d7b"],["/fonts/roboto/Roboto-Light.woff2","3c37aa69cd77e6a53a067170fa8fe2e9"],["/fonts/roboto/Roboto-Medium.woff","cf4d60bc0b1d4b2314085919a00e1724"],["/fonts/roboto/Roboto-Medium.woff2","1561b424aaef2f704bbd89155b3ce514"],["/fonts/roboto/Roboto-Regular.woff","3cf6adf61054c328b1b0ddcd8f9ce24d"],["/fonts/roboto/Roboto-Regular.woff2","5136cbe62a63604402f2fedb97f246f8"],["/fonts/roboto/Roboto-Thin.woff","44b78f142603eb69f593ed4002ed7a4a"],["/fonts/roboto/Roboto-Thin.woff2","1f35e6a11d27d2e10d28946d42332dc5"],["/img/avatar-17b1af67b3.jpg","17b1af67b312daa6df8d522e68f737b8"],["/img/avatar-4abab5322a.jpg","4abab5322a0388a5570280417323f299"],["/img/bg-d43cf8f313.jpg","d43cf8f313056ba88439d042edca5213"],["/index.html","d55fb092e13e0213d917ea32344763e1"],["/index.json","5337132cb5105b2a93391723d7e24c24"],["/js/Valine-54acfc7ad8.min.js","54acfc7ad84de92440342a0303a171b4"],["/js/Valine.min.js","54acfc7ad84de92440342a0303a171b4"],["/js/av-min-7decd7d8ad.js","7decd7d8ad2ecdad9aa8168ee8485524"],["/js/av-min.js","7decd7d8ad2ecdad9aa8168ee8485524"],["/js/canvas-c7ac392e3f.js","c7ac392e3f464d9d3897868407e44cc1"],["/js/index-a9f7f25322.js","2c79428b9006bfae8ba5bf9e9bba5798"],["/js/polyfill-6f68ef8238.js","6f68ef82386541ed242140db5c3282a1"],["/page/1/index.html","6d1f7f61d2a40ae57a69b47e7dcc5974"],["/pimg/11328970,1920,1080-047b7a2de8.jpg","047b7a2de85607457c8e3e34d0b86948"],["/posts/index.html","f72d79a081a091459ad6a3a3885caedc"],["/posts/page/1/index.html","f82ea37f359e97d8278ebf834c4897d1"],["/posts/sample/index.html","a8c0da9f32bcd5ef2df3b561b8ea843c"],["/svg/icon-f534fdc4b2.svg","f534fdc4b27570991ebe3dbc89ea15e0"],["/svg/icon.svg","f534fdc4b27570991ebe3dbc89ea15e0"],["/tags/index.html","1bfcba6e5361b1946fa4f1304efdc612"],["/tags/test/index.html","e1cdd55061279032040eeb846e1dc3ab"],["/tags/test/page/1/index.html","c707649f1fe5b4508eeff9752dc51b31"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function (originalUrl, index) {
+var addDirectoryIndex = function(originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function (originalResponse) {
+var cleanResponse = function(originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function (originalResponse) {
     });
   };
 
-var createCacheKey = function (originalUrl, paramName, paramValue,
+var createCacheKey = function(originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,7 +91,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
@@ -104,7 +104,7 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
     });
   };
 
-var stripIgnoredUrlParameters = function (originalUrl,
+var stripIgnoredUrlParameters = function(originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
