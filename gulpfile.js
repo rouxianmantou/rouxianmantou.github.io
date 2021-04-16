@@ -25,7 +25,7 @@ const siteConf = toml.parse(fs.readFileSync("./config.toml"));
 const c = Object.assign({}, require('./package.json').config);
 const testDir = '.tmp';
 const srcDir = 'assets';
-const themeDir = 'theme/canoe';
+const themeDir = "themes/canoe";
 const prodDir = siteConf.publishDir || "public";
 
 let env = 'dev' // dev, prod, theme

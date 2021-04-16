@@ -6,3 +6,4 @@ yarn.lock
 .rpt2_cache
 .forestry/
 .directory
+.DS_Store
